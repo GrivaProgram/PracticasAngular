@@ -1,0 +1,23 @@
+<!-- card -->
+ <div class="container m-4">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#añadirProductoModal">
+            
+            Añadir producto
+          </button>
+      <div class="row">
+            
+                  @for (item of productos; track item._id) {
+                        <div class="col-md-3 m-3 p-3" style="border: 1px solid black;">
+                              <div class="ing"></div>
+                               <div class="nombre"><span>El Nombre del producto es: </span>{{item.nombre}}</div>
+                               <div class="descripcion"><span>La descripción del Producto es: </span>{{item.descripcion}}</div>
+                               <div class="precio"><span>El costo del Producto es: </span>{{item.costo}}</div>
+                               <button class="btn btn-primary mt-3">Agregar al carro</button>
+                        </div>
+                        
+            
+                  }
+                  
+      </div>
+     
+ </div>
